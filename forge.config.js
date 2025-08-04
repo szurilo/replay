@@ -1,5 +1,6 @@
 const { FusesPlugin } = require("@electron-forge/plugin-fuses");
 const { FuseV1Options, FuseVersion } = require("@electron/fuses");
+require("dotenv").config();
 
 module.exports = {
   packagerConfig: {
@@ -29,10 +30,11 @@ module.exports = {
       name: "@electron-forge/publisher-github",
       config: {
         repository: {
-          owner: "szurilo@gmail.com",
-          name: "József Tar",
+          owner: "szurilo",
+          name: "replay",
         },
         prerelease: true,
+        draft: true,
       },
     },
   ],
