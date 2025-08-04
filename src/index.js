@@ -8,6 +8,8 @@ if (require("electron-squirrel-startup")) {
   app.quit();
 }
 
+app.setAppUserModelId("com.squirrel.replay.replay");
+
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
